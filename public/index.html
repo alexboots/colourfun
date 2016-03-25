@@ -11,3 +11,40 @@
   <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>
+
+<!--
+
+Redux:
+Everything is saved as a javascript object.
+
+State is the minimal representation of the data in your app.
+State tree cannot be modified or wrote too - need to dispatch an action to change it.
+	Action is a plain JS object describing the change.
+	Action is the minimal representation to the change to that data.
+	Structure is up to you, only required to have a {type:'whatever'} property.
+
+Components just need to dispatch an action - they dont have to be concerned with implementation.
+
+
+Pure function:
+  Return value depends souley on the values of their arguments
+  No network or database calls
+  They just calculate a new value
+  They do not modify the values passed to them - don't overrride what you pass into it.
+    Return a new object/array/whatever based on the old items
+
+
+Impure function overrwrite the values you pass to them.
+This is bad - redux must work w pure function
+
+UI or view layer is most predictable when its described as a pure function of the applications state
+State mutations need to be described as a pure function that takes the prevous state, the action being dispatched, and returns the next state of your application.
+
+Actions are called:: Reducer functions
+  They take in state and action, and return a new state.
+
+
+
+
+
+-->
